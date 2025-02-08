@@ -123,8 +123,8 @@ if __name__ == "__main__":
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     print(f'Using {device} device')
 
-    train_data = T5_dataset("/home/lzh/algo/task1/datasets/train.json")
-    dev_dataset = T5_dataset("/home/lzh/algo/task1/datasets/dev.json")
+    train_data = T5_dataset("train.json")
+    dev_dataset = T5_dataset("dev.json")
 
     train_size = int(train_data_radio * len(train_data))
     val_size = len(train_data) - train_size
